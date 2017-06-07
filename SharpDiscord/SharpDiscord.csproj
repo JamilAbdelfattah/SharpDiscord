@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{63A96300-CBCA-4819-8385-CFC1B204781B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SharpDiscord</RootNamespace>
+    <AssemblyName>SharpDiscord</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Clients\Common\IClient.cs" />
+    <Compile Include="Clients\Common\DiscordAPIWrapper.cs" />
+    <Compile Include="Clients\WSS\WSSClient.cs" />
+    <Compile Include="Configuration\Configuration.cs" />
+    <Compile Include="Configuration\DiscordURLs.cs" />
+    <Compile Include="Clients\HTTP\HTTPClient.cs" />
+    <Compile Include="Models\Channel\AttachmentModel.cs" />
+    <Compile Include="Models\Channel\BulkDeleteMessagesModel.cs" />
+    <Compile Include="Models\Channel\CreateChannelInviteModel.cs" />
+    <Compile Include="Models\Channel\CreateMessageModel.cs" />
+    <Compile Include="Models\Channel\DMChannelModel.cs" />
+    <Compile Include="Models\Channel\EditChannelPermissionsModel.cs" />
+    <Compile Include="Models\Channel\EditMessageModel.cs" />
+    <Compile Include="Models\Channel\Embed\EmbedAuthorModel.cs" />
+    <Compile Include="Models\Channel\Embed\EmbedFieldModel.cs" />
+    <Compile Include="Models\Channel\Embed\EmbedFooterModel.cs" />
+    <Compile Include="Models\Channel\Embed\EmbedImageModel.cs" />
+    <Compile Include="Models\Channel\Embed\EmbedModel.cs" />
+    <Compile Include="Models\Channel\Embed\EmbedProviderModel.cs" />
+    <Compile Include="Models\Channel\Embed\EmbedThumbnailModel.cs" />
+    <Compile Include="Models\Channel\Embed\EmbedVideoModel.cs" />
+    <Compile Include="Models\Channel\EmojiModel.cs" />
+    <Compile Include="Models\Channel\GroupDMAddRecipientModel.cs" />
+    <Compile Include="Models\Channel\GuildChannelModel.cs" />
+    <Compile Include="Models\Channel\MessageModel.cs" />
+    <Compile Include="Models\Channel\ModifyChannelModel.cs" />
+    <Compile Include="Models\Channel\OverwriteModel.cs" />
+    <Compile Include="Models\Channel\ReactionModel.cs" />
+    <Compile Include="Models\Guild\AddGuildMemberModel.cs" />
+    <Compile Include="Models\Guild\CreateGuildBanModel.cs" />
+    <Compile Include="Models\Guild\CreateGuildChannelModel.cs" />
+    <Compile Include="Models\Guild\CreateGuildIntegreationModel.cs" />
+    <Compile Include="Models\Guild\CreateGuildModel.cs" />
+    <Compile Include="Models\Guild\CreateGuildRoleModel.cs" />
+    <Compile Include="Models\Guild\Embed\GuildEmbedModel.cs" />
+    <Compile Include="Models\Guild\EmojiModel.cs" />
+    <Compile Include="Models\Guild\GuildMemberModel.cs" />
+    <Compile Include="Models\Guild\GuildModel.cs" />
+    <Compile Include="Models\Guild\IntegrationAccountModel.cs" />
+    <Compile Include="Models\Guild\IntegrationModel.cs" />
+    <Compile Include="Models\Guild\ListGuildMembersModel.cs" />
+    <Compile Include="Models\Guild\ModifyCurrentUserNickModel.cs" />
+    <Compile Include="Models\Guild\ModifyGuildChannelPositionsModel.cs" />
+    <Compile Include="Models\Guild\ModifyGuildIntegreationModel.cs" />
+    <Compile Include="Models\Guild\ModifyGuildMemberModel.cs" />
+    <Compile Include="Models\Guild\ModifyGuildModel.cs" />
+    <Compile Include="Models\Guild\ModifyGuildRoleModel.cs" />
+    <Compile Include="Models\Guild\ModifyGuildRolePositionModel.cs" />
+    <Compile Include="Models\Guild\RoleModel.cs" />
+    <Compile Include="Models\Guild\UnavailableGuildModel.cs" />
+    <Compile Include="Models\Invite\InviteChannelObjectModel.cs" />
+    <Compile Include="Models\Invite\InviteGuildModel.cs" />
+    <Compile Include="Models\Invite\InviteMetadateModel.cs" />
+    <Compile Include="Models\Invite\InviteModel.cs" />
+    <Compile Include="Models\User\ConnectionModel.cs" />
+    <Compile Include="Models\User\UserGuildModel.cs" />
+    <Compile Include="Models\User\UserModel.cs" />
+    <Compile Include="Models\Voice\VoiceRegionModel.cs" />
+    <Compile Include="Models\Voice\VoiceStateModel.cs" />
+    <Compile Include="Models\Webhook\CreateWebhookModel.cs" />
+    <Compile Include="Models\Webhook\ExecuteWebhookModel.cs" />
+    <Compile Include="Models\Webhook\ModifyWebhookModel.cs" />
+    <Compile Include="Models\Webhook\WebhookModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
